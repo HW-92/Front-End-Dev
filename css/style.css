@@ -1,0 +1,75 @@
+/* Import a clean, modern font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f7f0; /* Light green background for a fresh look */
+    color: #333; /* Dark text for readability */
+    padding-top: 76px; /* Adds space for fixed navbar */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand span {
+    font-size: 1.5rem;
+    color: #2e7d32; /* Dark green for brand name */
+    font-weight: 500;
+}
+
+/* Make the main content area flexible */
+main {
+    flex: 1;
+}
+
+/* Use the logo's green as the primary color */
+
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-primary:hover {
+    background-color: #228c3a;
+    border-color: #228c3a;
+}
+
+.btn-outline-primary {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-outline-primary:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* Hero Section (Home page) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+/* Hero Section (About page) */
+.hero-about {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url("../images/interior.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+/* Add focus styles for keyboard navigation */
+.nav-link:focus,
+.btn:focus,
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.5);
+    outline: none;
+}
