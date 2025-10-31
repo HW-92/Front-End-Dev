@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page metadata: charset + responsive viewport for mobile -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenLeaf Bistro</title>
+
+    <!-- Bootstrap provides base layout & components -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles to match brand -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <!-- Site navigation / brand
+             - Use navbar-expand-lg so menu collapses on small screens.
+             - Use navbar-light to pair with a light background.
+             - Use bg-light to disallow custom background color from style.css.
+             - Use shadow-sm for subtle shadow effect.
+             - Use fixed-top to keep navbar visible on scroll.
+        -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+            <div class="container">
+                <!-- Brand: logo image + visible site name
+                     - Use height attribute to keep the image small so navbar height stays consistent.
+                     - Use descriptive alt text for accessibility.
+                     - Update link to index.html to ensure home navigation works.
+                -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/green-leaf.png" alt="GreenLeaf Bistro Logo" height="40">
+                    <span>GreenLeaf Bistro</span>
+                </a>
+                <!-- Mobile menu toggle
+                     - Targets #navbarNav where the links live.
+                     - Screen readers benefit from aria-controls, aria-expanded, aria-label.
+                -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Nav links
+                     - Use ms-auto to push links to the right.
+                     - Mark the current page with .active + aria-current for accessibility.
+                -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <!-- active on this page -->
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero: use a background image + dark overlay to keep white text readable.
+             - Control hero visuals in css/style.css.
+             - Keep primary CTA prominent and descriptive.
+        -->
+        <section class="hero text-center text-white">
+            <div class="container">
+                <h1 class="display-3 fw-bold">Welcome to GreenLeaf Bistro</h1>
+                <p class="lead mb-3">Fresh, Organic, Unforgettable.</p>
+                <!-- Primary CTA -->
+                <a href="menu.html" class="btn btn-primary btn-lg">View Our Menu</a>
+            </div>
+        </section>
+
+        <!-- Intro section: two-column content with image
+             - Use responsive grid to stack on small screens.
+             - Images includes descriptive alt text for accessibility.
+             - Secondary CTA helps users explore more of the site.
+        -->
+        <section class="container my-5">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Eat Fresh, Live Well</h2>
+                    <p>At GreenLeaf Bistro, we believe in the power of fresh, locally-sourced ingredients. Our passion is crafting delicious meals that are both healthy for you and kind to the planet.</p>
+                    <!-- Secondary CTA -->
+                    <a href="about.html" class="btn btn-outline-primary">Learn More About Us</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/salad.jpg" class="img-fluid rounded" alt="A beautiful bowl of fresh salad">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Site footer -->
+    <footer class="bg-dark text-white text-center p-4 mt-auto">
+        <p>&copy; 2025 GreenLeaf Bistro. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts: load Bootstrap's JS bundle after DOM to avoid blocking. -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

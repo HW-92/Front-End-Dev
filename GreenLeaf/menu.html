@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page metadata: charset + responsive viewport for mobile -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenLeaf Bistro</title>
+
+    <!-- Bootstrap provides base layout & components -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles to match brand -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <!-- Site navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+            <div class="container">
+                <!-- Brand: logo image + visible site name -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/green-leaf.png" alt="GreenLeaf Bistro Logo" height="40">
+                    <span>GreenLeaf Bistro</span>
+                </a>
+                <!-- Mobile menu toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Nav links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- active on this page -->
+                            <a class="nav-link active" aria-current="page" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main menu grid: each card represents a menu item
+         - Use row-cols utilities to control how many cards per row at different breakpoints.
+         - Use card-body for textual content and card-img-top for images.
+    -->
+    <main class="container my-5">
+        <h1 class="text-center mb-4">Our Menu</h1>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Menu item card -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/avocado.jpg" class="card-img-top" alt="Gourmet avocado toast">
+                    <div class="card-body">
+                        <h5 class="card-title">Avocado Smash</h5>
+                        <p class="card-text">Sourdough toast topped with fresh avocado, feta, and a hint of chili.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Another menu card -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/quinoa.jpg" class="card-img-top" alt="Healthy quinoa salad">
+                    <div class="card-body">
+                        <h5 class="card-title">Quinoa Power Bowl</h5>
+                        <p class="card-text">Mixed greens, quinoa, roasted vegetables, and a lemon-tahini dressing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third sample card -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/smoothie.jpg" class="card-img-top" alt="Bright berry smoothie">
+                    <div class="card-body">
+                        <h5 class="card-title">Berry Boost Smoothie</h5>
+                        <p class="card-text">A blend of strawberries, blueberries, banana, and almond milk.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Site footer -->
+    <footer class="bg-dark text-white text-center p-4 mt-auto">
+        <p>&copy; 2025 GreenLeaf Bistro. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts: load Bootstrap's JS bundle after DOM to avoid blocking. -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
